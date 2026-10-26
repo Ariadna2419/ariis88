@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Ariadna Sofia Ramirez López</title>
+
+
+<style>
+/* ESTILO GENERAL */
+body {
+    background-color: #efb8ff;
+    color: #54205e;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    transition: background-color 1s;
+}
+
+
+h1 { color: #9b35b9; }
+h2 { color: #b34cae; }
+
+
+.caja {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #c77bc7;
+}
+
+
+.fila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+
+section {
+    margin: 25px 0;
+    padding: 15px;
+    border-bottom: 3px solid #c76bcf;
+}
+
+
+a {
+    color: purple;
+    margin: 10px;
+}
+
+
+table {
+    border-collapse: collapse;
+    border: 2px solid purple;
+    background-color: white;
+    min-width: 200px;
+}
+
+
+th, td {
+    border: 1px solid #d66acb;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.tablas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* BIENVENIDA */
+.bienvenida {
+    text-align: center;
+    background: linear-gradient(135deg, #f9d5ff, #e7c6ff);
+    border: 3px dashed #bd68d8;
+}
+
+
+/* RELOJ */
+.reloj {
+    text-align: center;
+}
+
+
+#hora {
+    font-size: 40px;
+    font-weight: bold;
+    color: #a12ac2;
+    text-shadow: 2px 2px 5px #e9a5ff;
+}
+
+
+#fecha {
+    font-size: 18px;
+    color: #792b91;
+    text-transform: capitalize;
+}
+
+
+/* FRASES */
+#frase {
+    font-size: 20px;
+    font-style: italic;
+    color: #a02d9b;
+    text-align: center;
+}
+
+
+/* JUEGO */
+#colorSorpresa {
+    padding: 25px;
+    margin: 15px auto;
+    max-width: 350px;
+    background-color: #e7c6ff;
+    color: #54205e;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+
+button {
+    background-color: #b44bd1;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 20px;
+    margin: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #8e35ad;
+    transform: scale(1.05);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #792b91;
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- BIENVENIDA -->
+<section class="caja bienvenida">
+    <h1>💜 ¡Holuuu! 💜</h1>
+    <h2>¡Bienvenido al inicio de la página! 🎀</h2>
+    <p>Este pequeño espacio está hecho con mucho amor por Ariadna.</p>
+    <p>✨ Aprende, sueña y logra ✨</p>
+</section>
+
+
+<!-- RELOJ Y FECHA -->
+<section class="caja reloj">
+    <h1>🕒 Mi reloj mágico</h1>
+    <div id="hora">Cargando...</div>
+    <p id="fecha">Cargando fecha...</p>
+</section>
+
+
+<!-- FRASES MOTIVADORAS -->
+<section class="caja">
+    <h1>✨ Una frase para ti</h1>
+    <p id="frase">¡Tú puedes lograr todo lo que te propongas!</p>
+    <div class="fila">
+        <button onclick="cambiarFrase()">Otra frase 💗</button>
+    </div>
+</section>
+
+
+<!-- MINI JUEGO -->
+<section class="caja">
+    <h1>🎨 Mini juego: Mi mundo de colores</h1>
+    <p>¡Presiona el botón y descubre un nuevo color!</p>
+
+
+    <div id="colorSorpresa">
+        💜 ¡Vamos a jugar! 💜
+    </div>
+
+
+    <div class="fila">
+        <button onclick="cambiarColor()">Cambiar color 🌈</button>
+    </div>
+
+
+    <p id="puntos" style="text-align:center">
+        Colores descubiertos: 0
+    </p>
+</section>
+
+
+<!-- DATOS PERSONALES -->
+<header class="caja">
+    <div class="fila">
+        <img
+        src="Screenshot_20260921_002209~2.jpg"
+        alt="Fotografía de Ariadna">
+
+
+        <h1><u>Ariadna Sofia Ramirez López</u></h1>
+    </div>
+
+
+    <h2><i>"Aprende, Sueña y Logra"</i></h2>
+    <hr>
+
+
+    <nav>
+        <a href="#gustos">Mis gustos</a>
+        <a href="#escuela">Mi trayectoria</a>
+        <a href="#mision">Mi misión</a>
+        <a href="#vision">Mi visión</a>
+        <a href="#amigos">Mis amigos</a>
+    </nav>
+</header>
+
+
+<!-- MIS GUSTOS -->
+<section class="caja" id="gustos">
+    <h1>💜 Mis gustos</h1>
+
+
+    <ul>
+        <li>Me gusta dormir.</li>
+        <li>Me gusta pintar en lienzo.</li>
+        <li>Me gusta el color lila.</li>
+        <li>Me gusta dibujar.</li>
+        <li>Me gusta comprar lentes nuevos.</li>
+        <li>Me gusta un niño.</li>
+        <li>Me gusta ser muy perfeccionista.</li>
+        <li>Me gusta el estilo gótico.</li>
+        <li>Me gusta ser güerita.</li>
+        <li>Me gusta ser creativa.</li>
+    </ul>
+
+
+    <div class="fila">
+        <img src="Snapchat-168324794.jpg" alt="Fotografía 1">
+        <img src="Snapchat-872910419.jpg" alt="Fotografía 2">
+        <img src="Snapchat-1099613934.jpg" alt="Fotografía 3">
+        <img src="Snapchat-1563681229.jpg" alt="Fotografía 4">
+    </div>
+</section>
+
+
+<!-- TRAYECTORIA ESCOLAR -->
+<section class="caja" id="escuela">
+    <h1>📚 Mi trayectoria escolar</h1>
+
+
+    <h2>Jardín de niños - Ecatepec (Tulpetlac)</h2>
+    <h3>Lic. Benito Juárez García - Texcoco</h3>
+    <h3>Rafael Ramírez - Ecatepec de Morelos</h3>
+    <h3>Escuela Secundaria Estatal Número 130
+    "Nezahualcóyotl"</h3>
+    <h3>CECyTEM Plantel Tezoyuca</h3>
+</section>
+
+
+<!-- AMIGAS -->
+<section class="caja">
+    <h1>💗 Mis amigas</h1>
+    <p>Victoria Díaz</p>
+    <p>Osiris Morales</p>
+</section>
+
+
+<!-- MISIÓN -->
+<section class="caja" id="mision">
+    <h1>🌷 Mi misión</h1>
+
+
+    <p>
+        Soy muy apasionada y dedicada a la carrera.
+        Trabajaré de la misma forma y con el mismo empeño.
+    </p>
+</section>
+
+
+<!-- VISIÓN -->
+<section class="caja" id="vision">
+    <h1>🦋 Mi visión</h1>
+
+
+    <p>
+        En cinco años me veo siendo piloto aviador
+        o trabajando en una torre de control,
+        ejerciendo a la par la carrera de programación.
+    </p>
+</section>
+
+
+<!-- AMIGOS -->
+<section class="caja" id="amigos">
+    <h1>👭 Amigos de infancia</h1>
+
+
+    <div class="tablas">
+        <table>
+            <tr>
+                <th>Amigo</th>
+                <th>Nombre</th>
+            </tr>
+            <tr>
+                <td>Sofi</td>
+                <td>Sofía Denisse</td>
+            </tr>
+            <tr>
+                <td>Luna</td>
+                <td>Luna Yusari</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<section class="caja">
+    <h1>💜 Amigos de secundaria</h1>
+
+
+    <div class="tablas">
+        <table>
+            <tr>
+                <th>Amigo</th>
+                <th>Nombre</th>
+            </tr>
+            <tr>
+                <td>Diego</td>
+                <td>Diego García</td>
+            </tr>
+            <tr>
+                <td>Paris</td>
+                <td>Paris Gómez</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<section class="caja">
+    <h1>🎀 Amigos de preparatoria</h1>
+
+
+    <div class="tablas">
+        <table>
+            <tr>
+                <th>Amigo</th>
+                <th>Nombre</th>
+            </tr>
+            <tr>
+                <td>Beker</td>
+                <td>Beker Yedaiel García Peláez</td>
+            </tr>
+            <tr>
+                <td>Luna</td>
+                <td>Luna Yusari</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<!-- DATOS DE CONTACTO -->
+<section class="caja">
+    <h1>📱 Mis datos</h1>
+    <p>Nombre: Ariadna Sofia</p>
+    <p>Instagram: @guel_nari</p>
+    <p>Correo: arigr205@gmail.com</p>
+</section>
+
+
+<footer>
+    <p>💜 Hecho con amor por Ariadna 💜</p>
+    <p>¡Nunca dejes de aprender, soñar y lograr! ✨</p>
+</footer>
+
+
+<script>
+// RELOJ Y FECHA DE CIUDAD DE MÉXICO
+function actualizarReloj() {
+    const ahora = new Date();
+
+
+    const opcionesHora = {
+        timeZone: "America/Mexico_City",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+    };
+
+
+    const opcionesFecha = {
+        timeZone: "America/Mexico_City",
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    };
+
+
+    document.getElementById("hora").textContent =
+        ahora.toLocaleTimeString("es-MX", opcionesHora);
+
+
+    document.getElementById("fecha").textContent =
+        ahora.toLocaleDateString("es-MX", opcionesFecha);
+
+
+    const horaMexico = Number(
+        new Intl.DateTimeFormat("es-MX", {
+            timeZone: "America/Mexico_City",
+            hour: "2-digit",
+            hourCycle: "h23"
+        }).format(ahora)
+    );
+
+
+    // EL FONDO CAMBIA SEGÚN LA HORA
+    if (horaMexico >= 6 && horaMexico < 12) {
+        document.body.style.backgroundColor = "#ffe4f2";
+    } else if (horaMexico >= 12 && horaMexico < 18) {
+        document.body.style.backgroundColor = "#e9d5ff";
+    } else if (horaMexico >= 18 && horaMexico < 21) {
+        document.body.style.backgroundColor = "#d8c5ff";
+    } else {
+        document.body.style.backgroundColor = "#302344";
+    }
+}
+
+
+actualizarReloj();
+setInterval(actualizarReloj, 1000);
+
+
+
+
+// FRASES MOTIVADORAS
+const frases = [
+    "Cree en ti, ¡eres capaz de lograr grandes cosas! 💜",
+    "Nunca dejes de soñar en grande. ✨",
+    "Tu creatividad es tu superpoder. 🎨",
+    "Cada día es una nueva oportunidad. 🌷",
+    "Sé tú misma, porque eres única. 💗",
+    "Los pequeños pasos también te llevan lejos. 🦋",
+    "Aprende, sueña y logra. 🌟",
+    "Tu esfuerzo de hoy construye tu futuro. 💕",
+    "No tengas miedo de brillar. ✨",
+    "¡Tú puedes con eso y mucho más! 🎀"
+];
+
+
+let ultimaFrase = -1;
+
+
+function cambiarFrase() {
+    let indice;
+
+
+    do {
+        indice = Math.floor(Math.random() * frases.length);
+    } while (indice === ultimaFrase && frases.length > 1);
+
+
+    ultimaFrase = indice;
+
+
+    document.getElementById("frase").textContent = frases[indice];
+}
+
+
+// Cambiar la frase automáticamente cada 15 segundos
+setInterval(cambiarFrase, 15000);
+
+
+
+
+// MINI JUEGO DE COLORES
+const colores = [
+    { fondo: "#ffb3d9", texto: "#70204b" },
+    { fondo: "#d8b4fe", texto: "#4c1d6f" },
+    { fondo: "#b9fbc0", texto: "#14532d" },
+    { fondo: "#a5f3fc", texto: "#164e63" },
+    { fondo: "#fff1a8", texto: "#713f12" },
+    { fondo: "#ffc6a5", texto: "#7c2d12" },
+    { fondo: "#c7d2fe", texto: "#312e81" },
+    { fondo: "#fbcfe8", texto: "#831843" }
+];
+
+
+let puntos = 0;
+
+
+function cambiarColor() {
+    const indice = Math.floor(Math.random() * colores.length);
+    const color = colores[indice];
+
+
+    const juego = document.getElementById("colorSorpresa");
+
+
+    juego.style.backgroundColor = color.fondo;
+    juego.style.color = color.texto;
+    juego.textContent = "¡Descubriste un color mágico! 🌈";
+
+
+    puntos++;
+
+
+    document.getElementById("puntos").textContent =
+        "Colores descubiertos: " + puntos + " 🎉";
+}
+</script>
+
+
+</body>
+</html>
